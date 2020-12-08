@@ -13,6 +13,10 @@ $main-icon-color: #f6a377;
 	border-color: $main-theme-color;
 }
 
+.bg-fc {
+	background: $main-bg-color;
+}
+
 .bg-theme {
 	background: $main-theme-color;
 }
@@ -21,6 +25,9 @@ $main-icon-color: #f6a377;
 }
 .color-title {
 	color: $main-title-color;
+}
+.color-theme {
+	color: $main-theme-color;
 }
 .width-max {
 	width: 100%;

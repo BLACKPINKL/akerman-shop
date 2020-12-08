@@ -6,6 +6,10 @@
 		onLaunch() {
 			// colorui 颜色列表
 			Vue.prototype.ColorList = this.getColorList()
+			Vue.prototype.themeColor = {
+				theme: '#a9e3db',
+				title: '#2c4862'
+			}
 			// console.log(this);
 		},
 		onShow() {
@@ -16,7 +20,18 @@
 		},
 		methods: {
 			getColorList() {
-				const colorList = [{
+				const colorList = [
+					{
+						title: '标题色',
+						name: 'title',
+						color: '#2c4862'
+					},
+					{
+						title: '主题色',
+						name: 'theme',
+						color: '#a9e3db'
+					},
+					{
 						title: '嫣红',
 						name: 'red',
 						color: '#e54d42'
