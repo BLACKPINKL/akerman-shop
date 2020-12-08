@@ -157,30 +157,8 @@ export default {
       }
     }
 
-    .form {
-      .form-submit {
-        margin-top: 80rpx;
-      }
-    }
-  }
-
-  .login-btns {
-    position: absolute;
-    bottom: 200rpx;
-    left: 0;
-    
-    .cu-btn {
-      width: 70%;
-      opacity: 0.7;
-      .icon {
-        position: absolute;
-        right: 30rpx;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-
     
   }
+
 }
 </style>

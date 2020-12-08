@@ -3,6 +3,9 @@ import App from './App'
 import store from './store'
 import MescrollBody from "./components/mescroll-uni/mescroll-body.vue"
 import MescrollUni from "./components/mescroll-uni/mescroll-uni.vue"
+import uView from 'uview-ui'
+
+Vue.use(uView);
 Vue.component('mescroll-body', MescrollBody)
 Vue.component('mescroll-uni', MescrollUni)
 
