@@ -24,8 +24,8 @@
       <input placeholder-class="color-title" type="password" placeholder="确认密码6到16位" name="input"/>
     </view>
 
-    <view class="form-submit text-center">
-      <button @click="handleClickReg" style="width: 80%" class="cu-btn lg bg-theme margin-bottom-lg color-title">
+    <view class="form-submit text-center u-margin-top-80">
+      <button @click="handleClickReg" style="width: 80%" class="cu-btn lg bg-theme color-title">
         注册
       </button>
     </view>

@@ -25,53 +25,10 @@
         </view>
       </view>
       <!-- 登录 -->
-      <view class="form" v-if="tab == 0">
-        <view class="cu-form-group margin-top background-none">
-          <text class='cuIcon-people color-theme margin-right-sm'></text>
-          <input placeholder-class="color-title" placeholder="手机号" name="input"></input>
-        </view>
-        <view :style="{'border-bottom': '1px solid ' + themeColor.title}" class="cu-form-group background-none border-color-title">
-          <text class='cuIcon-lock color-theme margin-right-sm'></text>
-          <input placeholder-class="color-title" type="password" placeholder="密码6到16位" name="input"></input>
-        </view>
-
-        <view class="form-submit text-center">
-          <button @click="handleClickLogin" style="width: 80%" class="cu-btn lg bg-theme margin-bottom-lg color-title">
-            登录
-          </button>
-        </view>
-      </view>
+      <Login v-if="tab == 0"></Login>
 
       <!-- 注册 -->
-
-      <view class="form" v-if="tab == 1">
-        <view class="cu-form-group margin-top background-none">
-          <text class='cuIcon-people color-theme margin-right-sm'></text>
-          <input placeholder-class="color-title" placeholder="手机号" name="input"></input>
-        </view>
-        <view class="cu-form-group background-none border-color-title">
-          <text class='cuIcon-mark color-theme margin-right-sm'></text>
-          <input placeholder-class="color-title" placeholder="短信验证码" name="input"></input>
-          <button class='cu-btn bg-green shadow bg-theme color-title'>验证码</button>
-        </view>
-
-
-
-        <view  class="cu-form-group background-none border-color-title">
-          <text class='cuIcon-lock color-theme margin-right-sm'></text>
-          <input placeholder-class="color-title" type="password" placeholder="密码6到16位" name="input"></input>
-        </view>
-        <view :style="{'border-bottom': '1px solid ' + themeColor.title}" class="cu-form-group background-none border-color-title">
-          <text class='cuIcon-lock color-theme margin-right-sm'></text>
-          <input placeholder-class="color-title" type="password" placeholder="确认密码6到16位" name="input"></input>
-        </view>
-
-        <view class="form-submit text-center">
-          <button @click="handleClickReg" style="width: 80%" class="cu-btn lg bg-theme margin-bottom-lg color-title">
-            注册
-          </button>
-        </view>
-      </view>
+      <Reg v-if="tab == 1"></Reg>
 
 
       <view class="">
@@ -94,9 +51,13 @@
 
 <script>
 import divider from '@/components/divider'
+import Reg from './components/reg-form'
+import Login from './components/login-form'
 export default {
   components: {
-    divider
+    divider,
+    Reg,
+    Login
   },
   data() {
     return {
@@ -107,26 +68,19 @@ export default {
     handleClickTab(i) {
       this.tab = i
     },
-    // 登录
-    handleClickLogin(e) {
-      
-    },
-    // 注册
-    handleClickReg(e) {
-      
-    },
+    
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.background-none {
-  background: none  !important;
+::v-deep .background-none {
+  background: none !important;
 }
-.solids-bottom {
-  border-color: $main-title-color  !important;
+::v-deep .solids-bottom {
+  border-color: $main-title-color !important;
 }
-.border-color-title {
+::v-deep .border-color-title {
   border-color: $main-title-color;
 }
 .login {
